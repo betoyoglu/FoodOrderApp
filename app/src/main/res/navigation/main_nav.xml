@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.foodorderapp.ui.fragment.MainPageFragment"
+        android:label="MainPageFragment" >
+        <action
+            android:id="@+id/mainToDetail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/mainToCart"
+            app:destination="@id/cartFragment" />
+        <argument
+            android:name="Yemekler"
+            app:argType="com.example.foodorderapp.data.entitiy.Yemekler" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.foodorderapp.ui.fragment.DetailFragment"
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/detailToCart"
+            app:destination="@id/cartFragment" />
+        <argument
+            android:name="Yemekler"
+            app:argType="com.example.foodorderapp.data.entitiy.Yemekler" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.foodorderapp.ui.fragment.CartFragment"
+        android:label="CartFragment" >
+        <argument
+            android:name="Yemekler"
+            app:argType="com.example.foodorderapp.data.entitiy.Yemekler" />
+    </fragment>
+</navigation>
