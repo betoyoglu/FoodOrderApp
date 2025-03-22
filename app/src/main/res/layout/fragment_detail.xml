@@ -11,16 +11,102 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
+        <ImageView
+            android:id="@+id/ivFood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="detail page"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="96dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textYemekAdi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="yemek adi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFood" />
+
+        <TextView
+            android:id="@+id/textYemekFiyati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="fiyati"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textYemekAdi" />
+
+        <TextView
+            android:id="@+id/totalNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="70dp"
+            android:text="toplam adet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textYemekFiyati" />
+
+        <Button
+            android:id="@+id/decreaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="17dp"
+            android:text="-"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/foodNum"
+            app:layout_constraintTop_toBottomOf="@+id/textYemekFiyati" />
+
+        <Button
+            android:id="@+id/increaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="+"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textYemekFiyati" />
+
+        <TextView
+            android:id="@+id/foodNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="19dp"
+            android:text="1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/increaseButton"
+            app:layout_constraintTop_toBottomOf="@+id/textYemekFiyati" />
+
+        <Button
+            android:id="@+id/CartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button"
+            android:text="Add To Cart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalNum" />
+
+        <TextView
+            android:id="@+id/finalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="69dp"
+            android:layout_marginTop="38dp"
+            android:text="son fiyat"
+            app:layout_constraintStart_toEndOf="@+id/CartButton"
+            app:layout_constraintTop_toBottomOf="@+id/decreaseButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
