@@ -31,7 +31,7 @@ class FoodAdapter(var mContext: Context, var YemeklerListesi:List<Yemekler>)
         t.textFood.text = "${food.yemek_adi}"
 
         t.cardViewFood.setOnClickListener{
-            val gecis =MainPageFragmentDirections.mainToDetail(food)
+            val gecis =MainPageFragmentDirections.mainToBottom(food)
             Navigation.findNavController(it).navigate(gecis)
         }
     }

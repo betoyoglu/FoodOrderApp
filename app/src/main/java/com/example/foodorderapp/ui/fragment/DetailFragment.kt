@@ -29,7 +29,7 @@ class DetailFragment : Fragment() {
             .into(binding.ivFood)
 
         binding.textYemekAdi.text = "${food.yemek_adi}"
-        binding.textYemekFiyati.text = "${food.yemek_fiyat}"
+        binding.textYemekFiyati.text = "${food.yemek_fiyat}TL"
 
         foodAmount()
         return binding.root
