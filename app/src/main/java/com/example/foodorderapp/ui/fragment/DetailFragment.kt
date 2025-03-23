@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -32,6 +33,11 @@ class DetailFragment : Fragment() {
         binding.textYemekFiyati.text = "${food.yemek_fiyat}TL"
 
         foodAmount()
+
+        binding.CartButton.setOnClickListener {
+            val gecis =DetailFragmentDirections.detailToCart(food)
+            Navigation.findNavController(it).navigate(gecis)
+        }
         return binding.root
     }
 
